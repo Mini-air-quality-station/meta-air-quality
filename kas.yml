@@ -1,0 +1,9 @@
+header:
+  version: 11
+  includes:
+    - kas/kas-common.yml
+
+distro: poky
+machine: raspberrypi4
+target:
+  - air-quality-debug
