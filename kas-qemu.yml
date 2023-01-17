@@ -1,0 +1,13 @@
+header:
+  version: 11
+  includes:
+    - kas/kas-common.yml
+
+distro: poky
+machine: qemuarm
+target:
+  - air-quality-debug
+  
+local_conf_header:
+  rpi: |
+    MACHINE_FEATURES:append = " wifi"

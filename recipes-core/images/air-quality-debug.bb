@@ -1,13 +1,15 @@
-include recipes-core/images/core-image-base.bb
+include recipes-core/images/core-image-minimal.bb
 
-IMAGE_FEATURES += "ssh-server-openssh debug-tweaks"
+IMAGE_FEATURES += "ssh-server-openssh debug-tweaks allow-root-login allow-empty-password empty-root-password"
 
-#LICENSE = "MIT"
-COMPATIBLE_MACHINE = "^rpi$"
+COMPATIBLE_MACHINE = "^rpi$|qemuarm$"
 
 IMAGE_INSTALL:append = " \
   packagegroup-core-base-utils \
-  busybox \
+  packagegroup-rpi \
+  iotop \
+  nano \
+  pciutils \
 "
 
-IMAGE_FSTYPES = "wic.gz wic.bmap"
+IMAGE_FSTYPES:qemuarm = "ext4"
