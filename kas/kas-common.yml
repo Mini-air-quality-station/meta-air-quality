@@ -6,11 +6,10 @@ repos:
 
   meta-raspberrypi:
     url: https://github.com/agherzan/meta-raspberrypi
-    refspec: 93dadf336ce11e3ed3ba75c7638b57fad60d6fdb
-
+    refspec: 6f5771d2bcfbfb8f8ce17b455c29a5703f2027c9
   poky:
     url: https://git.yoctoproject.org/git/poky
-    refspec: master
+    refspec: da318dd088a3573e3abefdf14ea9b8bfecf36e3c
     layers:
       meta:
       meta-poky:
@@ -18,7 +17,7 @@ repos:
 
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
-    refspec: master
+    refspec: c354f92778c1d4bcd3680af7e0fb0d1414de2344
     layers:
       meta-oe:
       meta-python:
@@ -27,7 +26,7 @@ repos:
 
   meta-qt5:
     url: https://github.com/meta-qt5/meta-qt5/
-    refspec: master
+    refspec: 1d1b19ff577835bf847152eed44d52e8267d9093
 
 bblayers_conf_header:
   standard: |
