@@ -4,6 +4,6 @@ header:
     - kas/kas-common.yml
 
 distro: air-quality-distro
-machine: raspberrypi4
+machine: raspberrypi4-64
 target:
   - air-quality-debug
