@@ -23,6 +23,7 @@ repos:
       meta-python:
       meta-networking:
       meta-perl:
+      meta-webserver:
 
   meta-qt5:
     url: https://github.com/meta-qt5/meta-qt5/
