@@ -29,4 +29,5 @@ RDEPENDS:${PN}-server = " \
   php-cgi \
   grafana \
   curl \
+  deploy-server-files \
 "

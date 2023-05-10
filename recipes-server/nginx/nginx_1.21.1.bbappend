@@ -11,7 +11,6 @@ do_install:append () {
 
     install -Dm 0644 ${WORKDIR}/default ${D}${sysconfdir}/nginx/sites-available/default_server
     sed -i 's,/var/,${localstatedir}/,g' ${D}${sysconfdir}/nginx/sites-available/default_server
-    install -d ${D}${sysconfdir}/nginx/sites-enabled
     ln -s ../sites-available/default_server ${D}${sysconfdir}/nginx/sites-enabled/
 
     install -d ${D}/${sysconfdir}/nginx/snippets

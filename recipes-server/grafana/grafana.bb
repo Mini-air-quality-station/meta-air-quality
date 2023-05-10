@@ -74,7 +74,7 @@ do_install() {
     cp ${D}${bindir}/grafana-server ${D}${datadir}/grafana/bin/grafana-server
 }
 
-INSANE_SKIP:${PN} = "ldflags already-stripped build-deps"
+INSANE_SKIP:${PN} += "ldflags already-stripped build-deps"
 
 SYSTEMD_SERVICE:${PN} = " \
    grafana.service  \
