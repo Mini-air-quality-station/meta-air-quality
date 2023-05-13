@@ -1,0 +1,10 @@
+[Unit]
+Description=Internal init procedure for pfp-fpm
+
+[Service]
+Restart=on-failure
+RestartSec=10
+ExecStart=/usr/bin/php-initscript
+
+[Install]
+WantedBy=multi-user.target

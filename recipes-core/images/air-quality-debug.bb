@@ -14,3 +14,9 @@ IMAGE_INSTALL:append = " \
 "
 
 IMAGE_FSTYPES = "wic.gz wic.bmap"
+
+change_php_fpm_config() {
+  sed -i 's/^listen = 127.0.0.1:9000$/listen=\/run\/php\/php-fpm.sock/' ${IMAGE_ROOTFS}/${sysconfdir}/php-fpm.conf
+}
+
+ROOTFS_POSTPROCESS_COMMAND += "change_php_fpm_config; "
