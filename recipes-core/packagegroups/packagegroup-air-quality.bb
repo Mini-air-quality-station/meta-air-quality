@@ -20,6 +20,7 @@ RDEPENDS:${PN}-system = " \
   systemd \
   busybox \
   nano \
+  sudo \
 "
 
 RDEPENDS:${PN}-server = " \
