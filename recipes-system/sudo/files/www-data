@@ -1,0 +1,2 @@
+%www-data ALL=(ALL:ALL) NOPASSWD: /var/www/html/scripts/reboot.sh
+%www-data ALL=(ALL:ALL) NOPASSWD: /var/www/html/scripts/poweroff.sh

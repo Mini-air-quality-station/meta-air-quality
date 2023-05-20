@@ -3,7 +3,7 @@ header:
   includes:
     - kas/kas-common.yml
 
-distro: poky
-machine: raspberrypi4
+distro: air-quality-distro
+machine: raspberrypi4-64
 target:
   - air-quality-debug

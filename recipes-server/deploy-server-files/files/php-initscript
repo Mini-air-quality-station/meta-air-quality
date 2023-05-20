@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+install -d -m 755 /run/php
+touch /run/php/php-fpm.sock
+chown www-data:www-data /run/php
+chmod 660 /run/php/php-fpm.sock
+systemctl start php-fpm
+systemctl restart nginx
+chown www-data:www-data /run/php/php-fpm.sock
