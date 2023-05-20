@@ -22,7 +22,7 @@ S = "${WORKDIR}/git"
 
 RDEPENDS:${PN} += "bash"
 
-do_install () {
+do_install() {
     install -d ${D}/var/www
 
     cp -r ${S}/html ${D}/var/www/html

@@ -5,7 +5,7 @@ SRC_URI:append = " \
     file://fastcgi-php.conf \
     "
 
-do_install:append () {
+do_install:append() {
     rm ${D}${sysconfdir}/nginx/sites-available/default_server
     rm ${D}${sysconfdir}/nginx/sites-enabled/default_server
 

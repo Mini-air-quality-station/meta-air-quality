@@ -2,10 +2,6 @@ DESCRIPTION = "The tool for beautiful monitoring and metric analytics & dashboar
 
 S = "${WORKDIR}/grafana-9.5.1"
 
-SRC_URI = "https://dl.grafana.com/oss/release/grafana-9.5.1.linux-amd64.tar.gz;name=amd64"
-SRC_URI:armv6 = "https://dl.grafana.com/oss/release/grafana-9.5.1.linux-armv6.tar.gz;name=armv6"
-SRC_URI:armv7a = "https://dl.grafana.com/oss/release/grafana-9.5.1.linux-armv7.tar.gz;name=armv7"
-SRC_URI:armv7ve = "https://dl.grafana.com/oss/release/grafana-9.5.1.linux-armv7.tar.gz;name=armv7"
 SRC_URI:armv8a = "https://dl.grafana.com/oss/release/grafana-9.5.1.linux-arm64.tar.gz;name=arm64"
 
 SRC_URI:append = " \
@@ -17,9 +13,6 @@ SRC_URI:append = " \
     file://grafana.service \
 "
 
-SRC_URI[amd64.sha256sum] = "0a8bc55949aa920682b3bde99e9b1b87eef2c644bde8f8a48fa3ac746920d2ba"
-SRC_URI[armv7.sha256sum] = "29dfd878e78b5810d3bfd2399e5b0a159e38220f9283c44c202299b8e59ab099"
-SRC_URI[armv6.sha256sum] = "23bdb5729dd2ba8a70891c25c97aa93f469df040570ae73ce307fc3b9309016c"
 SRC_URI[arm64.sha256sum] = "ed6c692be378e2d9a1a730169867ea4f3da83d814f123a1a340579644032c93e"
 
 LICENSE = "AGPLv3"

@@ -17,14 +17,14 @@ HOST=${HOST:-"localhost"}
 PORT=${BIND_ADDRESS##*:}
 
 set +e
-attempts=0
-url="$PROTOCOL://$HOST:$PORT/ready"
-result=$(curl -k -s -o /dev/null $url -w %{http_code})
-while [ "${result:0:2}" != "20" ] && [ "${result:0:2}" != "40" ]; do
-  attempts=$(($attempts+1))
-  echo "InfluxDB API at $url unavailable after $attempts attempts..."
+ATTEMPTS=0
+URL="$PROTOCOL://$HOST:$PORT/ready"
+RESULT=$(curl -k -s -o /dev/null $URL -w %{http_code})
+while [ "${RESULT:0:2}" != "20" ] && [ "${RESULT:0:2}" != "40" ]; do
+  ATTEMPTS=$(($ATTEMPTS+1))
+  echo "InfluxDB API at $URL unavailable after $ATTEMPTS attempts..."
   sleep 1
-  result=$(curl -k -s -o /dev/null $url -w %{http_code})
+  RESULT=$(curl -k -s -o /dev/null $URL -w %{http_code})
 done
 echo "InfluxDB started"
 set -e
