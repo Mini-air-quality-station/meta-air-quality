@@ -22,6 +22,8 @@ RDEPENDS:${PN}-system = " \
   nano \
   sudo \
   linux-firmware-rpidistro-bcm43455 \
+  spitools \
+  i2c-tools \
 "
 
 RDEPENDS:${PN}-server = " \

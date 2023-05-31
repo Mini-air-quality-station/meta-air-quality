@@ -44,6 +44,9 @@ local_conf_header:
     ENABLE_UART = "1"
     RPI_USE_U_BOOT = "1"
     LICENSE_FLAGS_ACCEPTED += "synaptics-killswitch"
+    ENABLE_SPI_BUS = "1"
+    ENABLE_I2C = "1"
+    KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
 
   debug-tweaks: |
     EXTRA_IMAGE_FEATURES = "debug-tweaks"

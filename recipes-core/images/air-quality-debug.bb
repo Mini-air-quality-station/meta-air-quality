@@ -12,6 +12,9 @@ IMAGE_INSTALL:append = " \
   packagegroup-air-quality-python \
   packagegroup-base-extended \
   deploy-files \
+  libgpiod \
+  libgpiod-dev \
+  libgpiod-tools \
 "
 
 IMAGE_FSTYPES = "wic.gz wic.bmap"
