@@ -21,6 +21,7 @@ RDEPENDS:${PN}-system = " \
   busybox \
   nano \
   sudo \
+  linux-firmware-rpidistro-bcm43455 \
 "
 
 RDEPENDS:${PN}-server = " \
@@ -31,4 +32,5 @@ RDEPENDS:${PN}-server = " \
   grafana \
   curl \
   deploy-server-files \
+  hostapd \
 "

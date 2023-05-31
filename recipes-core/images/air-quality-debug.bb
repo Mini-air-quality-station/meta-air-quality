@@ -10,6 +10,7 @@ IMAGE_INSTALL:append = " \
   packagegroup-air-quality-system \
   packagegroup-air-quality-server \
   packagegroup-air-quality-python \
+  packagegroup-base-extended \
   deploy-files \
 "
 
