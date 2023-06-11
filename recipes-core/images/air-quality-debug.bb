@@ -15,6 +15,7 @@ IMAGE_INSTALL:append = " \
   libgpiod \
   libgpiod-dev \
   libgpiod-tools \
+  libftdi \
 "
 
 IMAGE_FSTYPES = "wic.gz wic.bmap"

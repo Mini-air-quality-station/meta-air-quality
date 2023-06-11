@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+source /etc/mini-air-quality/pip-env-var
+
+if [ "$RPI_FIRST_BOOT" -eq 0 ]; then
+    pip3 install --no-index /etc/pip-packages/packages/*
+    RPI_FIRST_BOOT=1
+    echo "RPI_FIRST_BOOT=1" > /etc/mini-air-quality/pip-env-var
+fi
+
+python3 /usr/src/sensors-and-screen-controller/sensor_main.py

@@ -1,0 +1,10 @@
+[Unit]
+Description=Internal init procedure for sensors and screen
+
+[Service]
+Restart=on-failure
+RestartSec=10
+ExecStart=/usr/bin/sensors-initscript
+
+[Install]
+WantedBy=multi-user.target

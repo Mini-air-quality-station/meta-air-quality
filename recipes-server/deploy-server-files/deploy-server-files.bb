@@ -11,13 +11,13 @@ SYSTEMD_SERVICE:${PN} = "php-init.service"
 LIC_FILES_CHKSUM = "file://${S}/LICENSE;md5=5c4f15bc8568030112779b0fc53a2c9a"
 
 SRC_URI = " \
-        git://github.com/Mini-air-quality-station/web-server.git;protocol=https;branch=change-scripts-bash-dir \
+        git://github.com/Mini-air-quality-station/web-server.git;protocol=https;branch=master \
         file://php-init.service \
         file://php-initscript \
         "
 
 SRC_URI[sha256sum] = "e47d6907616e32dd3266d59861afc60383fd857381bd81c2daf48dd9d3683863"
-SRCREV = "963ae500fe38f3508a936812e776a5a2a2350d65"
+SRCREV = "976559757901b2b31b64b914ba01d2b8c53e95dd"
 S = "${WORKDIR}/git"
 
 RDEPENDS:${PN} += "bash"
