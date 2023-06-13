@@ -34,6 +34,8 @@ RDEPENDS:${PN}-system = " \
   linux-firmware-rpidistro-bcm43455 \
   spitools \
   i2c-tools \
+  make \
+  gcc \
 "
 
 RDEPENDS:${PN}-server = " \

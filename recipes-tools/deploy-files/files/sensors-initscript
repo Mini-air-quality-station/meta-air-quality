@@ -6,6 +6,13 @@ if [ "$RPI_FIRST_BOOT" -eq 0 ]; then
     pip3 install --no-index /etc/pip-packages/packages/*
     RPI_FIRST_BOOT=1
     echo "RPI_FIRST_BOOT=1" > /etc/mini-air-quality/pip-env-var
+    pushd .
+    cd /etc/pigpio/pigpio-master
+    make
+    make install
+    popd
 fi
 
-python3 /usr/src/sensors-and-screen-controller/sensor_main.py
+pigpiod
+cd /usr/src/sensors-and-screen-controller/
+python3 sensor_main.py

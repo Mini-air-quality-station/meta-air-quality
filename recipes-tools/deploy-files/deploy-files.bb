@@ -6,8 +6,10 @@ SRC_URI = " \
         git://github.com/Mini-air-quality-station/sensors-and-screen-controller.git;protocol=https;branch=main \
         file://packages \
         file://pip-env-var \
+        file://pigpio-master \
         file://sensors-initscript \
         file://start-sensors.service \
+        file://DejaVuSansMono.ttf \
         "
 SRCREV = "40a83796e654b8f3c30f81adc3c235de52098100"
 S = "${WORKDIR}/git"
@@ -25,6 +27,9 @@ RDEPENDS:${PN} = " \
 do_install () {
     install -d ${D}/${sysconfdir}/pip-packages/
     cp -r ${WORKDIR}/packages ${D}/${sysconfdir}/pip-packages
+
+    install -d ${D}/${sysconfdir}/pigpio/
+    cp -r ${WORKDIR}/pigpio-master ${D}/${sysconfdir}/pigpio
 
     install -d ${D}/${sysconfdir}/mini-air-quality/
     install -d ${D}/${sysconfdir}/mini-air-quality/sensor-spec/
@@ -46,6 +51,7 @@ do_install () {
 
     install -d ${D}/${prefix}/src/sensors-and-screen-controller/
     install -m 0755 ${S}/LICENSE ${D}/${prefix}/src/sensors-and-screen-controller/LICENSE
+    install -m 0755 ${WORKDIR}/DejaVuSansMono.ttf ${D}/${prefix}/src/sensors-and-screen-controller/DejaVuSansMono.ttf
     install -m 0755 ${S}/display.py ${D}/${prefix}/src/sensors-and-screen-controller/display.py
     install -m 0755 ${S}/display_config.ini ${D}/${prefix}/src/sensors-and-screen-controller/display_config.ini
     install -m 0755 ${S}/menu.py ${D}/${prefix}/src/sensors-and-screen-controller/menu.py
