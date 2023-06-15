@@ -47,4 +47,5 @@ RDEPENDS:${PN}-server = " \
   curl \
   deploy-server-files \
   hostapd \
+  kea \
 "
