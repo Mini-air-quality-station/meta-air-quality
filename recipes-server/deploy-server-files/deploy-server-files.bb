@@ -17,7 +17,7 @@ SRC_URI = " \
         "
 
 SRC_URI[sha256sum] = "e47d6907616e32dd3266d59861afc60383fd857381bd81c2daf48dd9d3683863"
-SRCREV = "976559757901b2b31b64b914ba01d2b8c53e95dd"
+SRCREV = "ff4cbf3fa29efebc97f848ad410e05ab70037a5c"
 S = "${WORKDIR}/git"
 
 RDEPENDS:${PN} += "bash"

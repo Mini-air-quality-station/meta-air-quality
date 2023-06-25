@@ -11,7 +11,7 @@ SRC_URI = " \
         file://start-sensors.service \
         file://DejaVuSansMono.ttf \
         "
-SRCREV = "40a83796e654b8f3c30f81adc3c235de52098100"
+SRCREV = "b7fa5a49b7f0cd01309a9c3a1fa715205f8c1466"
 S = "${WORKDIR}/git"
 
 inherit systemd

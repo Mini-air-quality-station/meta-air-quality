@@ -36,6 +36,7 @@ RDEPENDS:${PN}-system = " \
   i2c-tools \
   make \
   gcc \
+  tzdata \
 "
 
 RDEPENDS:${PN}-server = " \
