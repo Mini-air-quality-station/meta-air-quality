@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+source /etc/mini-air-quality/pip-env-var
+
+if [ "$RPI_FIRST_BOOT" -eq 0 ]; then
+    timedatectl set-timezone "Europe/Warsaw"
+    timedatectl set-ntp 0
+    pip3 install --no-index /etc/pip-packages/packages/*
+    RPI_FIRST_BOOT=1
+    echo "RPI_FIRST_BOOT=1" > /etc/mini-air-quality/pip-env-var
+    pushd .
+    cd /etc/pigpio/pigpio-master
+    make
+    make install
+    popd
+fi
+
+pigpiod
+cd /usr/src/sensors-and-screen-controller/
+python3 sensor_main.py

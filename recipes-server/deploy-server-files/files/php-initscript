@@ -7,3 +7,6 @@ chmod 660 /run/php/php-fpm.sock
 systemctl start php-fpm
 systemctl restart nginx
 chown www-data:www-data /run/php/php-fpm.sock
+ip addr add 192.168.88.1/24 dev wlan0
+systemctl start hostapd
+systemctl start kea-dhcp4

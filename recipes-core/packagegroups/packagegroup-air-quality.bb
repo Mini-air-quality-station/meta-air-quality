@@ -14,6 +14,16 @@ PACKAGES = " \
 RDEPENDS:${PN}-python = " \
   python3 \
   python3-pyyaml \
+  python3-pip \
+  python3-setuptools \
+  python3-luma-core \
+  python3-luma-lcd \
+  python3-cbor2 \
+  python3-spidev \
+  python3-dev \
+  python3-installer \
+  python3-wheel \
+  rpi-gpio \
 "
 
 RDEPENDS:${PN}-system = " \
@@ -21,6 +31,12 @@ RDEPENDS:${PN}-system = " \
   busybox \
   nano \
   sudo \
+  linux-firmware-rpidistro-bcm43455 \
+  spitools \
+  i2c-tools \
+  make \
+  gcc \
+  tzdata \
 "
 
 RDEPENDS:${PN}-server = " \
@@ -31,4 +47,6 @@ RDEPENDS:${PN}-server = " \
   grafana \
   curl \
   deploy-server-files \
+  hostapd \
+  kea \
 "

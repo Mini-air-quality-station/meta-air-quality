@@ -6,7 +6,7 @@ repos:
 
   meta-raspberrypi:
     url: https://github.com/agherzan/meta-raspberrypi
-    refspec: 6f5771d2bcfbfb8f8ce17b455c29a5703f2027c9
+    refspec: 8e3cbfa598de106a78d9a9e27aa25ded51416896
   poky:
     url: https://git.yoctoproject.org/git/poky
     refspec: da318dd088a3573e3abefdf14ea9b8bfecf36e3c
@@ -44,6 +44,9 @@ local_conf_header:
     ENABLE_UART = "1"
     RPI_USE_U_BOOT = "1"
     LICENSE_FLAGS_ACCEPTED += "synaptics-killswitch"
+    ENABLE_SPI_BUS = "1"
+    ENABLE_I2C = "1"
+    KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
 
   debug-tweaks: |
     EXTRA_IMAGE_FEATURES = "debug-tweaks"
